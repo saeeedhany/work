@@ -1,12 +1,7 @@
-// Generates placeholder visuals for the three sample projects.
-// Each layout is drawn twice: as a finished UI (result.svg) and as its
-// wireframe (design.svg). Each project can have several screens (sections).
-// Replace these files with real screenshots.
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const W = 1200, H = 800;
 
-// shape helpers: every shape knows how to draw itself as UI or as wireframe
 const box = (x, y, w, h, fill, r = 8) => ({ t: "box", x, y, w, h, fill, r });
 const img = (x, y, w, h, fill, r = 8) => ({ t: "img", x, y, w, h, fill, r });
 const text = (x, y, w, size, fill, str) => ({ t: "text", x, y, w, size, fill, str });
@@ -55,7 +50,6 @@ ${draw(shapes, mode)}
 `;
 }
 
-// ---- tidepool: a coastal tide & swell dashboard ----
 const wave = (y0, amp, phase) => {
   let d = `M340 ${y0}`;
   for (let x = 340; x <= 1140; x += 20) d += ` L${x} ${(y0 + Math.sin((x + phase) / 70) * amp + Math.sin((x + phase) / 23) * amp * 0.2).toFixed(1)}`;
@@ -80,7 +74,6 @@ const tidepool = {
   ],
 };
 
-// ---- paperplane: a calm three-pane email client (UI design) ----
 const paperplane = {
   bg: "#f6f3ee",
   shapes: [
@@ -103,7 +96,6 @@ const paperplane = {
   ],
 };
 
-// ---- loom: a small textile shop ----
 const loom = {
   bg: "#fffaf3",
   shapes: [
@@ -121,7 +113,6 @@ const loom = {
   ],
 };
 
-// ---- tidepool, second screen: a single surf spot ----
 const tideCurve = () => {
   let d = "M80 520";
   for (let x = 80; x <= 1120; x += 20) d += ` L${x} ${(470 + Math.sin((x - 80) / 165) * 110).toFixed(1)}`;
@@ -144,7 +135,6 @@ const tidepoolSpot = {
   ],
 };
 
-// ---- loom, second screen: a product page ----
 const loomProduct = {
   bg: "#fffaf3",
   shapes: [

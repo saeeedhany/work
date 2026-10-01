@@ -1,5 +1,3 @@
-/* Layout: two stacked floors in one shaft. Floor 1 is a plain 1998 directory
-   listing; floor 2 is contact. Everything modern happens in motion, not in chrome. */
 :root {
   --paper: #ffffff;
   --ink: #000000;
@@ -8,7 +6,7 @@
   --visited: #551a8b;
   --chrome: #c0c0c0;
   --chrome-light: #efefef;
-  --tip: #ffffe1;               /* old tooltip yellow */
+  --tip: #ffffe1;
   --rule: #808080;
   --scrim: rgb(255 255 255 / 0.72);
   --shadow: 6px 6px 0 var(--ink);
@@ -54,7 +52,6 @@ kbd { font-family: var(--mono); font-size: .8em; border: 1px solid var(--rule); 
 [hidden] { display: none !important; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-/* ---------- the shaft & floors ---------- */
 .shaft { position: fixed; inset: 0; overflow: hidden; }
 .floor {
   position: absolute; inset: 0;
@@ -65,7 +62,6 @@ kbd { font-family: var(--mono); font-size: .8em; border: 1px solid var(--rule); 
 }
 h1 { font-size: 2em; font-weight: 700; margin: 0 0 8px; }
 
-/* ---------- index table ---------- */
 .table-wrap { overflow-x: auto; }
 .index { border-collapse: collapse; font-family: var(--serif); min-width: 100%; }
 .index th { text-align: left; font-weight: 700; padding: 2px 28px 6px 0; white-space: nowrap; }
@@ -84,13 +80,12 @@ address { font-style: italic; font-size: 15px; color: var(--ink-soft); }
   .col-kind, .col-parts { display: none; }
 }
 
-/* ---------- contact floor ---------- */
 .floor-contact { visibility: hidden; transform: translateY(100%); display: flex; flex-direction: column; justify-content: center; gap: 18px; }
 .path { font-family: var(--mono); font-size: 14px; color: var(--ink-soft); margin: 0; }
 .email {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.3rem, 6vw, 6rem); /* sized so a long address stays on one line */
+  font-size: clamp(1.3rem, 6vw, 6rem);
   line-height: 1;
   letter-spacing: -0.02em;
   overflow-wrap: anywhere;
@@ -120,7 +115,6 @@ address { font-style: italic; font-size: 15px; color: var(--ink-soft); }
 .elsewhere .why { color: var(--ink-soft); font-family: var(--mono); font-size: 12px; margin-left: 8px; }
 .elsewhere { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 20px; }
 
-/* ---------- hover bloom ---------- */
 .bloom {
   position: fixed; left: 0; top: 0; z-index: 20;
   width: 340px;
@@ -129,7 +123,7 @@ address { font-style: italic; font-size: 15px; color: var(--ink-soft); }
   box-shadow: var(--shadow);
   pointer-events: none;
   visibility: hidden;
-  will-change: transform, clip-path, opacity; /* own layer: nothing it paints can linger on the page */
+  will-change: transform, clip-path, opacity;
 }
 .bloom-bar { display: flex; align-items: center; gap: 5px; padding: 5px 8px; background: var(--chrome); border-bottom: 1px solid var(--ink); font-family: var(--mono); font-size: 11px; }
 .bloom-bar i { width: 8px; height: 8px; border: 1px solid var(--ink); border-radius: 50%; display: block; }
@@ -138,7 +132,6 @@ address { font-style: italic; font-size: 15px; color: var(--ink-soft); }
 .bloom-media img, .bloom-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (hover: none), (max-width: 900px) { .bloom { display: none; } }
 
-/* ---------- specimen ---------- */
 .scrim { position: fixed; inset: 0; z-index: 30; background: var(--scrim); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 .specimen {
   position: fixed; z-index: 31;
@@ -187,7 +180,6 @@ address { font-style: italic; font-size: 15px; color: var(--ink-soft); }
 .result-grid .frame { width: min(100%, calc((100svh - 300px) * 1.5)); }
 .frame img, .frame video { display: block; width: 100%; height: auto; }
 
-/* result */
 .result-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(16px, 3vw, 36px); align-items: start; }
 .result-meta { display: grid; gap: 14px; }
 .result-meta dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; margin: 0; font-size: 16px; }
@@ -195,7 +187,6 @@ address { font-style: italic; font-size: 15px; color: var(--ink-soft); }
 .result-meta dd { margin: 0; }
 @media (max-width: 760px) { .result-grid { grid-template-columns: minmax(0, 1fr); } }
 
-/* design: compare slider */
 .compare { position: relative; border: 1px solid var(--ink); overflow: hidden; width: min(100%, calc((100svh - 420px) * 1.5)); min-width: min(100%, 320px); }
 .compare img { display: block; width: 100%; height: auto; }
 .compare .over { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--split, 50%)); }
@@ -205,13 +196,11 @@ address { font-style: italic; font-size: 15px; color: var(--ink-soft); }
 .compare input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
 .compare-legend { width: min(100%, max(calc((100svh - 420px) * 1.5), 320px)); display: flex; justify-content: space-between; font-family: var(--mono); font-size: 13px; color: var(--ink-soft); }
 
-/* design: one tab per page of the project */
 .pages { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; font-family: var(--mono); font-size: 14px; }
 .pages button { background: none; border: 0; padding: 2px 0; font: inherit; color: var(--link); text-decoration: underline; cursor: pointer; }
 .pages button[aria-current="true"] { color: var(--ink); text-decoration: none; background: var(--tip); padding-inline: 4px; }
 .pages-count { color: var(--ink-soft); font-size: 12px; margin-left: auto; }
 
-/* stack diagram */
 .stack { display: grid; gap: 0; max-width: 760px; }
 .tier { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 16px; align-items: center; padding: 14px 0; position: relative; }
 .tier + .tier::before {
@@ -228,7 +217,6 @@ address { font-style: italic; font-size: 15px; color: var(--ink-soft); }
   .tier + .tier::before { left: 20px; }
 }
 
-/* ---------- status bar ---------- */
 .status {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;

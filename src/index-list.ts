@@ -1,4 +1,3 @@
-// The plain directory listing, and the preview that blooms out of a row on hover.
 import { gsap } from "gsap";
 import { projects, type Project } from "./data/projects";
 import { $, el, media } from "./ui";
@@ -35,7 +34,6 @@ export function renderIndex() {
 export const rowLink = (slug: string) =>
   document.querySelector<HTMLAnchorElement>(`tr[data-slug="${slug}"] .row-link`);
 
-// ---------- hover bloom ----------
 let hideBloom = () => {};
 export const closeBloom = () => hideBloom();
 
@@ -54,7 +52,6 @@ function initBloom() {
 
   const place = (cx: number, cy: number, jump = false) => {
     const w = bloom.offsetWidth, h = bloom.offsetHeight;
-    // sit to the right of the project name, never on top of it
     const nameEnd = hotRow?.firstElementChild?.lastElementChild?.getBoundingClientRect().right ?? 0;
     let x = Math.max(cx, nameEnd) + 40;
     if (x + w > innerWidth - 16) x = cx - w - 32;
@@ -73,7 +70,6 @@ function initBloom() {
     if (!shown) {
       shown = true;
       place(e.clientX, e.clientY, true);
-      // x/y belong to the quickTo follow, so only these properties are ever killed
       gsap.killTweensOf(bloom, BLOOM_PROPS);
       gsap.fromTo(bloom,
         { autoAlpha: 1, clipPath: "inset(50% 100% 50% 0%)", scale: 0.96 },
@@ -88,7 +84,6 @@ function initBloom() {
     shown = false;
     current = null;
     gsap.killTweensOf(bloom, BLOOM_PROPS);
-    // collapse, fade and settle in one tween so an interrupted open always ends fully hidden
     gsap.to(bloom, {
       clipPath: "inset(50% 0% 50% 100%)", opacity: 0, scale: 1, duration: 0.3, ease: "power3.in",
       onComplete: () => { gsap.set(bloom, { autoAlpha: 0, clipPath: "inset(50% 50% 50% 50%)" }); },

@@ -5,7 +5,6 @@ export const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.g
 const reduceQuery = matchMedia("(prefers-reduced-motion: reduce)");
 export const reduced = () => reduceQuery.matches;
 
-/** An <img> or a muted looping <video>, depending on the file. */
 export function media(src: string, alt: string): HTMLElement {
   if (/\.(mp4|webm)$/i.test(src)) {
     const v = document.createElement("video");
@@ -27,12 +26,10 @@ export function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, 
   return e;
 }
 
-// ---------- the old-browser status bar ----------
 const statusText = () => $("statusText");
 const meter = () => $("statusMeter");
 let loading = false;
 
-/** Like Netscape: show a link's address while it is hovered or focused. */
 export function initStatus() {
   const show = (e: Event) => {
     const a = (e.target as Element).closest?.("a[href]") as HTMLAnchorElement | null;
@@ -47,7 +44,6 @@ export function initStatus() {
   document.addEventListener("focusout", clear);
 }
 
-/** Run the progress meter while a transition plays. */
 export function loadStatus(message: string, seconds: number) {
   loading = true;
   statusText().textContent = message;
@@ -62,6 +58,5 @@ export function loadStatus(message: string, seconds: number) {
   });
 }
 
-/** Resolves when a timeline finishes playing. */
 export const finished = (tl: gsap.core.Timeline) =>
   new Promise<void>((resolve) => tl.eventCallback("onComplete", () => resolve()));

@@ -1,5 +1,3 @@
-// Routing is just the URL hash:  (none) = the index,  #contact,  #<slug> = an open project.
-// Every change goes through one queue so transitions never overlap.
 import { projects } from "./data/projects";
 import { renderIndex, rowLink, closeBloom } from "./index-list";
 import { initContact, toContact, toWork, isOnContact } from "./elevator";
@@ -17,7 +15,7 @@ function parse(): Route {
 
 let route: Route = { name: "index" };
 let queue = Promise.resolve();
-let cameFromIndex = false; // true when Back would land on the index
+let cameFromIndex = false;
 
 async function apply(next: Route, animate: boolean) {
   closeBloom();
@@ -35,7 +33,6 @@ async function apply(next: Route, animate: boolean) {
 
 const go = (next: Route, animate: boolean) => { queue = queue.then(() => apply(next, animate)).catch(console.error); };
 
-/** Return to the index: use real history when we came from it, so Back/Forward stay honest. */
 function leave() {
   if (cameFromIndex) {
     history.back();

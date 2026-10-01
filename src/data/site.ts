@@ -1,5 +1,3 @@
-// Contact details shown on the second screen.
-// `struck: true` shows a link crossed out, for profiles that are still empty.
 export const site = {
   email: "alsaeedalbasi0ny@gmail.com",
   links: [

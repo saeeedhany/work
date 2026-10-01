@@ -1,38 +1,22 @@
-// ─────────────────────────────────────────────────────────────
-// Your work lives here. This is the only file you need to edit.
-//
-// For each project:
-//   1. Put its images in  public/work/<slug>/
-//      Two images per section (page/screen) of the project:
-//        <section>-result.(png|jpg|webp|svg|mp4)   the finished screen
-//        <section>-design.(png|jpg|webp|svg)       its wireframe / Figma frame,
-//                                                  same size so the slider lines up
-//   2. Add an entry to `projects`. Order here = order on the page.
-//      The first section is the one used for the hover preview and the Result sheet.
-//
-// The three entries below are SAMPLES. Delete them when you add your own.
-// ─────────────────────────────────────────────────────────────
-
-/** Where a piece of the stack sits. Drives the "Stack" diagram rows. */
 export type Tier = "interface" | "logic" | "data" | "hosting";
 
 export interface Section {
-  name: string;              // shown as a page name, e.g. "Home", "Checkout"
-  result: string;            // path under /public
-  design: string;            // path under /public
+  name: string;
+  result: string;
+  design: string;
 }
 
 export interface Project {
-  slug: string;              // letters, digits, dashes. Used in the URL (#slug)
+  slug: string;
   title: string;
   year: number;
   kind: "Web app" | "Website" | "UI design";
-  summary: string;           // one sentence, shown on the Result sheet
-  url?: string;              // live link, if there is one
-  repo?: string;             // public source code, if there is one
-  sections: Section[];       // at least one
+  summary: string;
+  url?: string;
+  repo?: string;
+  sections: Section[];
   stack: { name: string; tier: Tier }[];
-  sample?: boolean;          // marks placeholder entries
+  sample?: boolean;
 }
 
 const shots = (slug: string, ...names: string[]): Section[] =>

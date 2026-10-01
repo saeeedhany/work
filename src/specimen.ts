@@ -1,6 +1,3 @@
-// An opened project: sheets stacked like paper, Result → Design → Stack.
-// Drag the top sheet left to peel it off and reveal the next layer; drag right
-// to pull the previous sheet back from the left. Arrow keys and the tabs do the same.
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 import type { Project, Tier } from "./data/projects";
@@ -25,7 +22,6 @@ let onKey: ((e: KeyboardEvent) => void) | null = null;
 
 export const openProject = () => openSlug;
 
-// ---------- building the sheets ----------
 function sheet(i: number, p: Project, body: Node[]) {
   const s = el("article", "sheet");
   s.setAttribute("aria-label", LAYERS[i]);
@@ -60,7 +56,6 @@ function resultSheet(p: Project) {
   return [grid];
 }
 
-/** Presses inside `node` never reach the sheet, so they can't start a sheet drag. */
 function keepGesture(node: HTMLElement) {
   for (const type of ["pointerdown", "mousedown", "touchstart"]) {
     node.addEventListener(type, (e) => e.stopPropagation(), { passive: true });
@@ -94,7 +89,6 @@ function designSheet(p: Project) {
   const legend = el("div", "compare-legend");
   legend.append(el("span", undefined, "← wireframe"), el("span", undefined, "finished screen →"));
 
-  // one tab per page/screen of the project, like files in a directory
   const pages = el("div", "pages");
   pages.setAttribute("role", "group");
   pages.setAttribute("aria-label", "Pages");
@@ -143,7 +137,6 @@ function stackSheet(p: Project) {
   return [stack];
 }
 
-// ---------- entrance effects per layer ----------
 function reveal(i: number) {
   if (reduced()) return;
   const s = sheets[i];
@@ -162,9 +155,7 @@ function reveal(i: number) {
   }
 }
 
-// ---------- deck layout ----------
 const deckWidth = () => $("spDeck").offsetWidth;
-// where a peeled sheet waits: off to the left, tilted, hidden
 const peeled = () => ({ x: -deckWidth() * 1.15, y: -30, rotation: -9 });
 
 function layout(animate: boolean) {
@@ -198,7 +189,6 @@ function goTo(i: number) {
 const nextSheet = () => goTo(cur + 1);
 const prevSheet = () => goTo(cur - 1);
 
-/** Nothing on these starts a sheet drag: they have their own gestures. */
 const ownGesture = (t: Element) => !!t.closest?.("a, button, input, .compare, .pages");
 
 function makeDraggable(s: HTMLElement, j: number) {
@@ -216,11 +206,9 @@ function makeDraggable(s: HTMLElement, j: number) {
       lastX = this.x; lastT = now;
       const x = this.x;
       if (x <= 0) {
-        // dragging left peels this sheet off; the last sheet only gives a little
         const shown = j === sheets.length - 1 ? x * 0.25 : x;
         gsap.set(s, { x: shown, rotation: shown * 0.025, y: -Math.abs(shown) * 0.04 });
       } else {
-        // dragging right pulls the previous sheet back in from the left
         gsap.set(s, { x: x * 0.12, rotation: 0, y: 0 });
         const prev = sheets[j - 1];
         if (prev) {
@@ -244,7 +232,6 @@ function makeDraggable(s: HTMLElement, j: number) {
   return d;
 }
 
-// ---------- open / close ----------
 export function buildSpecimen(p: Project) {
   $("spTitle").textContent = p.slug;
   const deck = $("spDeck");

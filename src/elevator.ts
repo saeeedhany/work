@@ -1,6 +1,3 @@
-// The two floors: /work and /contact. Moving between them is one vertical
-// "elevator drop": the work slab rises out as a single piece while the
-// contact floor arrives from below with a small overshoot.
 import { gsap } from "gsap";
 import { site } from "./data/site";
 import { $, el, reduced, loadStatus, finished } from "./ui";
@@ -16,7 +13,6 @@ export function initContact() {
   const email = $<HTMLAnchorElement>("email");
   email.href = "mailto:" + site.email;
   email.setAttribute("aria-label", site.email);
-  // one span per character so the address can arrive letter by letter
   for (const ch of site.email) email.append(el("span", "ch", ch));
 
   const list = $("elsewhere");
@@ -27,7 +23,6 @@ export function initContact() {
     a.target = "_blank";
     a.rel = "noopener";
     if (l.struck) {
-      // crossed out: the profile exists but has nothing on it yet
       a.setAttribute("aria-label", `${l.label} (nothing posted yet)`);
       a.append(el("span", "strike"));
       li.append(a, el("span", "why", "(nothing here yet)"));
