@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Index of /work</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Cpath d=%22M1 3h5l1 2h8v9H1z%22 fill=%22%23c0c0c0%22 stroke=%22black%22/%3E%3C/svg%3E" />
+    <meta name="description" content="Selected projects: websites, web apps and interface design." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <div class="shaft">
+      <!-- floor 1: the work -->
+      <main class="floor floor-work" id="work">
+        <h1>Index of /work</h1>
+        <hr />
+        <div class="table-wrap">
+          <table class="index">
+            <thead>
+              <tr><th>Name</th><th>Year</th><th class="col-kind">Kind</th><th class="col-parts">Built with</th></tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+        <hr />
+        <address id="server"></address>
+        <p class="to-contact"><a href="#contact" id="contactLink">[ contact ]</a></p>
+      </main>
+
+      <!-- floor 2: contact -->
+      <section class="floor floor-contact" id="contact" aria-labelledby="contactTitle">
+        <p class="path">/contact</p>
+        <h2 id="contactTitle" class="visually-hidden">Contact</h2>
+        <a class="email" id="email" href="#"></a>
+        <p class="copy-row">
+          <button type="button" class="copy" id="copyBtn">copy address</button>
+          <span class="copy-status" id="copyStatus" role="status"></span>
+        </p>
+        <ul class="elsewhere" id="elsewhere"></ul>
+        <hr />
+        <p><a href="#" id="backLink">&uarr; back to /work</a></p>
+      </section>
+    </div>
+
+    <!-- hover preview -->
+    <div class="bloom" id="bloom" aria-hidden="true">
+      <div class="bloom-bar"><i></i><i></i><i></i><span id="bloomUrl"></span></div>
+      <div class="bloom-media" id="bloomMedia"></div>
+    </div>
+
+    <!-- opened project -->
+    <div class="scrim" id="scrim" hidden></div>
+    <div class="specimen" id="specimen" role="dialog" aria-modal="true" aria-labelledby="spTitle" hidden>
+      <header class="sp-bar">
+        <span class="sp-path">/work/<b id="spTitle"></b>/</span>
+        <nav class="sp-tabs" id="spTabs" aria-label="Layers"></nav>
+        <button type="button" class="sp-close" id="spClose">close <kbd>esc</kbd></button>
+      </header>
+      <div class="sp-deck" id="spDeck"></div>
+      <p class="sp-hint" id="spHint">drag the sheet left to see how it was made, right to go back &nbsp;·&nbsp; <kbd>&larr;</kbd> <kbd>&rarr;</kbd></p>
+    </div>
+
+    <footer class="status" id="status" aria-hidden="true">
+      <span id="statusText">Done</span>
+      <span class="status-meter"><i id="statusMeter"></i></span>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<rect width="1200" height="800" fill="#ffffff"/><defs><pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#eef0f2" stroke-width="1"/></pattern></defs><rect width="1200" height="800" fill="url(#g)"/>
+<rect x="0" y="0" width="280" height="800" rx="0" fill="none" stroke="#9aa0a6" stroke-width="2"/>
+<rect x="40" y="49" width="150" height="19.599999999999998" rx="3" fill="#dfe2e5"/>
+<rect x="40" y="136.5" width="110" height="12.6" rx="3" fill="#dfe2e5"/>
+<rect x="40" y="184.5" width="110" height="12.6" rx="3" fill="#dfe2e5"/>
+<rect x="40" y="232.5" width="110" height="12.6" rx="3" fill="#dfe2e5"/>
+<rect x="40" y="280.5" width="110" height="12.6" rx="3" fill="#dfe2e5"/>
+<rect x="40" y="328.5" width="110" height="12.6" rx="3" fill="#dfe2e5"/>
+<rect x="340" y="54.5" width="360" height="23.799999999999997" rx="3" fill="#dfe2e5"/>
+<rect x="340" y="101.5" width="260" height="12.6" rx="3" fill="#dfe2e5"/>
+<rect x="340" y="160" width="800" height="330" rx="14" fill="none" stroke="#9aa0a6" stroke-width="2"/>
+<path d="M340 330 L340 271.9 L360 267.2 L380 267.0 L400 278.4 L420 302.7 L440 334.1 L460 362.7 L480 380.6 L500 386.5 L520 385.7 L540 385.4 L560 389.4 L580 394.8 L600 394.2 L620 381.2 L640 355.5 L660 324.0 L680 296.6 L700 280.3 L720 275.3 L740 275.8 L760 274.6 L780 269.2 L800 263.3 L820 264.9 L840 279.5 L860 306.4 L880 337.8 L900 363.9 L920 378.6 L940 382.7 L960 382.9 L980 385.6 L1000 392.5 L1020 398.5 L1040 395.8 L1060 379.5 L1080 351.6 L1100 320.5 L1120 295.8 L1140 282.7" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M340 360 L340 353.2 L360 371.0 L380 384.7 L400 391.4 L420 392.3 L440 391.5 L460 392.5 L480 395.6 L500 397.5 L520 394.0 L540 382.7 L560 365.7 L580 348.1 L600 335.3 L620 329.5 L640 328.8 L660 329.0 L680 327.1 L700 323.3 L720 321.5 L740 326.0 L760 338.2 L780 355.5 L800 372.6 L820 384.5 L840 389.5 L860 390.2 L880 390.7 L900 393.5 L920 397.8 L940 399.3 L960 394.0 L980 380.9 L1000 363.3 L1020 346.8 L1040 335.9 L1060 331.5 L1080 330.7 L1100 329.5 L1120 325.7 L1140 321.1" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-dasharray="8 6"/>
+<circle cx="740" cy="300" r="9" fill="none" stroke="#9aa0a6" stroke-width="2"/>
+<rect x="340" y="520" width="250" height="200" rx="14" fill="none" stroke="#9aa0a6" stroke-width="2"/>
+<rect x="615" y="520" width="250" height="200" rx="14" fill="none" stroke="#9aa0a6" stroke-width="2"/>
+<rect x="890" y="520" width="250" height="200" rx="14" fill="none" stroke="#9aa0a6" stroke-width="2"/>
+<rect x="370" y="566.5" width="120" height="12.6" rx="3" fill="#dfe2e5"/>
+<rect x="370" y="611" width="140" height="36.4" rx="3" fill="#dfe2e5"/>
+<rect x="645" y="566.5" width="120" height="12.6" rx="3" fill="#dfe2e5"/>
+<rect x="645" y="611" width="140" height="36.4" rx="3" fill="#dfe2e5"/>
+<rect x="920" y="566.5" width="120" height="12.6" rx="3" fill="#dfe2e5"/>
+<rect x="920" y="611" width="160" height="36.4" rx="3" fill="#dfe2e5"/>
+</svg>

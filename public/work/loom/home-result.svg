@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<rect width="1200" height="800" fill="#fffaf3"/>
+<text x="60" y="64" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#1f3d2b">loom market</text>
+<text x="760" y="62" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#1f3d2b">Shop</text>
+<text x="860" y="62" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#1f3d2b">Makers</text>
+<text x="960" y="62" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#1f3d2b">Journal</text>
+<text x="1060" y="62" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#1f3d2b">Cart (2)</text>
+<rect x="60" y="110" width="1080" height="300" rx="16" fill="#c9d8c5"/>
+<text x="110" y="250" font-family="Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#1f3d2b">Woven slowly.</text>
+<text x="110" y="295" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#3e5c49">Autumn throws from four small mills</text>
+<rect x="110" y="325" width="150" height="46" rx="23" fill="#1f3d2b"/>
+<text x="148" y="354" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#fffaf3">Shop now</text>
+<rect x="60" y="450" width="252" height="230" rx="12" fill="#e9c9a8"/>
+<text x="60" y="716" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#1f3d2b">Ridge throw</text>
+<text x="60" y="746" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#3e5c49">$180</text>
+<rect x="336" y="450" width="252" height="230" rx="12" fill="#b9c7d6"/>
+<text x="336" y="716" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#1f3d2b">Tide blanket</text>
+<text x="336" y="746" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#3e5c49">$220</text>
+<rect x="612" y="450" width="252" height="230" rx="12" fill="#d8b4a0"/>
+<text x="612" y="716" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#1f3d2b">Clay runner</text>
+<text x="612" y="746" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#3e5c49">$95</text>
+<rect x="888" y="450" width="252" height="230" rx="12" fill="#c3cfb4"/>
+<text x="888" y="716" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#1f3d2b">Moss cushion</text>
+<text x="888" y="746" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#3e5c49">$64</text>
+</svg>

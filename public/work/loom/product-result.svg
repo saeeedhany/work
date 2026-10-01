@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<rect width="1200" height="800" fill="#fffaf3"/>
+<text x="60" y="64" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#1f3d2b">loom market</text>
+<text x="760" y="62" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#1f3d2b">Shop</text>
+<text x="860" y="62" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#1f3d2b">Makers</text>
+<text x="960" y="62" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#1f3d2b">Journal</text>
+<text x="1060" y="62" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#1f3d2b">Cart (2)</text>
+<rect x="60" y="110" width="560" height="640" rx="16" fill="#e9c9a8"/>
+<text x="680" y="170" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#3e5c49">Ridgeline Mill</text>
+<text x="680" y="230" font-family="Helvetica, Arial, sans-serif" font-size="46" font-weight="700" fill="#1f3d2b">Ridge throw</text>
+<text x="680" y="280" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f3d2b">$180</text>
+<circle cx="700" cy="340" r="16" fill="#e9c9a8"/>
+<circle cx="750" cy="340" r="16" fill="#b9c7d6"/>
+<circle cx="800" cy="340" r="16" fill="#3e5c49"/>
+<text x="680" y="410" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#3e5c49">Lambswool, woven on a 1960s dobby loom.</text>
+<text x="680" y="440" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#3e5c49">Lambswool, woven on a 1960s dobby loom.</text>
+<text x="680" y="470" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#3e5c49">Lambswool, woven on a 1960s dobby loom.</text>
+<text x="680" y="500" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="400" fill="#3e5c49">Lambswool, woven on a 1960s dobby loom.</text>
+<rect x="680" y="560" width="440" height="56" rx="28" fill="#1f3d2b"/>
+<text x="840" y="595" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#fffaf3">Add to cart</text>
+<text x="680" y="680" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#3e5c49">Ships from Wales in 3–5 days</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<rect width="1200" height="800" fill="#0d1b2a"/>
+<text x="80" y="80" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#6d8aa6">← Spots</text>
+<text x="80" y="140" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#e0f2ff">Linda Mar</text>
+<text x="80" y="178" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#6d8aa6">Beach break · best on a rising mid tide</text>
+<rect x="860" y="100" width="260" height="100" rx="14" fill="#132f4c"/>
+<text x="890" y="140" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#6d8aa6">Now</text>
+<text x="890" y="180" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffd166">1.4 m</text>
+<rect x="80" y="240" width="1040" height="420" rx="14" fill="#132f4c"/>
+<path d="M80 520 L80 470.0 L100 483.3 L120 496.4 L140 509.1 L160 521.3 L180 532.7 L200 543.1 L220 552.5 L240 560.7 L260 567.6 L280 573.0 L300 576.9 L320 579.3 L340 580.0 L360 579.1 L380 576.7 L400 572.6 L420 567.1 L440 560.1 L460 551.8 L480 542.3 L500 531.8 L520 520.3 L540 508.1 L560 495.3 L580 482.2 L600 468.9 L620 455.6 L640 442.5 L660 429.9 L680 417.8 L700 406.4 L720 396.1 L740 386.8 L760 378.7 L780 371.9 L800 366.6 L820 362.8 L840 360.6 L860 360.0 L880 361.0 L900 363.6 L920 367.8 L940 373.5 L960 380.5 L980 388.9 L1000 398.5 L1020 409.1 L1040 420.7 L1060 432.9 L1080 445.7 L1100 458.9 L1120 472.2" fill="none" stroke="#7fdbff" stroke-width="4" stroke-linecap="round"/>
+<text x="110" y="640" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#6d8aa6">00:00</text>
+<text x="270" y="640" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#6d8aa6">04:00</text>
+<text x="430" y="640" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#6d8aa6">08:00</text>
+<text x="590" y="640" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#6d8aa6">12:00</text>
+<text x="750" y="640" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#6d8aa6">16:00</text>
+<text x="910" y="640" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#6d8aa6">20:00</text>
+<text x="1070" y="640" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#6d8aa6">24:00</text>
+<circle cx="440" cy="384" r="10" fill="#ffd166"/>
+<rect x="80" y="690" width="330" height="70" rx="12" fill="#132f4c"/>
+<rect x="435" y="690" width="330" height="70" rx="12" fill="#132f4c"/>
+<rect x="790" y="690" width="330" height="70" rx="12" fill="#132f4c"/>
+<text x="105" y="733" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#e0f2ff">Low 03:12 · 0.3 m</text>
+<text x="460" y="733" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#e0f2ff">High 09:12 · 1.8 m</text>
+<text x="815" y="733" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#e0f2ff">Low 15:40 · 0.4 m</text>
+</svg>
