@@ -4,8 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview",
-    "make-samples": "node scripts/make-samples.mjs"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@types/node": "^22.20.4",

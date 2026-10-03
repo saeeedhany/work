@@ -188,9 +188,9 @@ address { font-style: italic; font-size: 15px; color: var(--ink-soft); }
 @media (max-width: 760px) { .result-grid { grid-template-columns: minmax(0, 1fr); } }
 
 .compare { position: relative; border: 1px solid var(--ink); overflow: hidden; width: min(100%, calc((100svh - 420px) * 1.5)); min-width: min(100%, 320px); }
-.compare img { display: block; width: 100%; height: auto; }
+.compare img, .compare video { display: block; width: 100%; height: auto; }
 .compare .over { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--split, 50%)); }
-.compare .over img { height: 100%; object-fit: cover; }
+.compare .over img, .compare .over video { height: 100%; object-fit: cover; }
 .compare .seam { position: absolute; top: 0; bottom: 0; left: var(--split, 50%); width: 0; border-left: 2px solid var(--link); pointer-events: none; }
 .compare .seam::after { content: "⇔"; position: absolute; top: 50%; left: -15px; transform: translateY(-50%); width: 28px; height: 28px; display: grid; place-items: center; background: var(--paper); border: 2px solid var(--link); color: var(--link); font-size: 14px; }
 .compare input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }

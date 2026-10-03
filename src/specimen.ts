@@ -76,8 +76,6 @@ function designSheet(p: Project) {
   const cmp = el("div", "compare");
   const base = new Image();
   const over = el("div", "over");
-  const top = new Image();
-  over.append(top);
   const seam = el("div", "seam");
   const input = el("input");
   Object.assign(input, { type: "range", min: "0", max: "100", value: "50" });
@@ -101,7 +99,7 @@ function designSheet(p: Project) {
     at = k;
     const sec = p.sections[k];
     base.src = sec.design; base.alt = `${sec.name}, wireframe`;
-    top.src = sec.result; top.alt = `${sec.name}, finished`;
+    over.replaceChildren(media(sec.result, `${sec.name}, finished`));
     pages.querySelectorAll("button").forEach((b, j) => b.setAttribute("aria-current", String(j === k)));
     count.textContent = `page ${k + 1} of ${p.sections.length}`;
     if (!first && !reduced()) {
@@ -142,15 +140,14 @@ function reveal(i: number) {
   const s = sheets[i];
   const layer = LAYERS[i];
   if (layer === "result") {
-    gsap.from(s.querySelector(".frame"), { scale: 0.97, opacity: 0, duration: 0.6, ease: "expo.out" });
+    gsap.fromTo(s.querySelector(".frame"), { scale: 0.97, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "expo.out", overwrite: true });
   } else if (layer === "design") {
     sweep(s.querySelector<HTMLElement>(".compare")!);
   } else if (layer === "stack") {
     const r = gsap.utils.random;
-    gsap.from(s.querySelectorAll(".pill"), {
-      x: () => r(-160, 160), y: () => r(-90, 90), rotation: () => r(-30, 30), opacity: 0,
-      stagger: 0.05, duration: 0.8, ease: "back.out(1.5)",
-    });
+    gsap.fromTo(s.querySelectorAll(".pill"),
+      { x: () => r(-160, 160), y: () => r(-90, 90), rotation: () => r(-30, 30), opacity: 0 },
+      { x: 0, y: 0, rotation: 0, opacity: 1, stagger: 0.05, duration: 0.8, ease: "back.out(1.5)", overwrite: true });
     gsap.fromTo(s.querySelectorAll(".tier"), { "--wire": 0 }, { "--wire": 1, stagger: 0.12, duration: 0.4, delay: 0.4 });
   }
 }
@@ -214,7 +211,7 @@ function makeDraggable(s: HTMLElement, j: number) {
         if (prev) {
           const t = Math.min(x / (deckWidth() * 0.9), 1);
           const from = peeled();
-          gsap.set(prev, { autoAlpha: 1, x: from.x * (1 - t), y: from.y * (1 - t), rotation: from.rotation * (1 - t) });
+          gsap.set(prev, { zIndex: 21, autoAlpha: 1, x: from.x * (1 - t), y: from.y * (1 - t), rotation: from.rotation * (1 - t) });
           gsap.set(prev.firstElementChild, { opacity: 1 });
         }
       }
