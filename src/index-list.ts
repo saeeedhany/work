@@ -1,34 +1,46 @@
 import { gsap } from "gsap";
-import { projects, type Project } from "./data/projects";
+import { projects, categories, type Project } from "./data/projects";
 import { $, el, media } from "./ui";
 
 export function renderIndex() {
   const rows = $("rows");
-  for (const p of projects) {
-    const tr = el("tr");
-    tr.dataset.slug = p.slug;
-
+  for (const c of categories) {
+    const inside = projects.filter((p) => p.category === c.id);
+    if (!inside.length) continue;
+    const head = el("tr", "group");
     const name = el("td");
-    const a = el("a", "row-link");
-    a.href = "#" + p.slug;
-    a.append(el("span", "tag", "[DIR]"), `${p.slug}/`);
-    name.append(a);
-    if (p.sample) name.append(el("span", "sample", "(sample)"));
-
-    const built = p.stack.length > 1 ? `${p.stack[0].name} + ${p.stack.length - 1}` : p.stack[0]?.name ?? "";
-    tr.append(
-      name,
-      el("td", "num", String(p.year)),
-      el("td", "col-kind", p.kind),
-      el("td", "col-parts", built),
-    );
-    rows.append(tr);
+    name.append(el("span", "tag", "[DIR]"), el("b", undefined, `${c.id}/`), el("span", "count", `${inside.length}`));
+    const about = el("td", "about", c.about);
+    about.colSpan = 3;
+    head.append(name, about);
+    rows.append(head, ...inside.map(row));
   }
 
   const port = location.port || (location.protocol === "https:" ? "443" : "80");
   $("server").textContent = `Served statically at ${location.hostname} Port ${port}`;
 
   initBloom();
+}
+
+function row(p: Project) {
+  const tr = el("tr", "item");
+  tr.dataset.slug = p.slug;
+
+  const name = el("td");
+  const a = el("a", "row-link");
+  a.href = "#" + p.slug;
+  a.append(el("span", "tag", "[DIR]"), `${p.slug}/`);
+  name.append(a);
+  if (p.sample) name.append(el("span", "sample", "(sample)"));
+
+  const built = p.stack.length > 1 ? `${p.stack[0].name} + ${p.stack.length - 1}` : p.stack[0]?.name ?? "";
+  tr.append(
+    name,
+    el("td", "num", String(p.year)),
+    el("td", "col-kind", p.kind),
+    el("td", "col-parts", built),
+  );
+  return tr;
 }
 
 export const rowLink = (slug: string) =>
